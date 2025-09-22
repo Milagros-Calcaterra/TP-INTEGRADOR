@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+<!-- CSS Reset -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
+<!-- Milligram CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+
+<!-- You should properly set the path from the main file. -->
+</head>
+
+<body class="container">
+    <h1>Contactenos! </h1>
+   <p>Realice su consulta que, a la brevedad nos pondremos en contacto con usted</p>
+
+
+   <form action="https://formsubmit.co/calcamili@gmail.com" method="post">
+   
+
+        <label>Nombre completo <input type="text"></label> 
+         <!-- implicito -->
+    <label for="nombre">Nombre </label>
+    <input type ="text" name= "nombre">   <!-- explicito -->
+    <label for="apellido">Apellido </label>
+    <input type ="text" name= "nombre">
+    <label> Email <input type ="email"  name="email" id="email" placeholder="correo electronico"></label>  
+
+        
+        
+        
+
+
+
+<input type="text" name="nombre" placeholder="nombre completo" maxlength="50" minlength="10"> 
+ <!-- placeholder---- nombre adentro de la caja - maxlength ---- max caracteres -->
+ 
+ <label for="miselect">Seleccione una opción</label>
+ <select name="opcion" id="miselect">
+   <option value="opcion1">Opción 1</option>
+   <option value="opcion2">Opción 2</option>
+   <option value="opcion3">Opción 3</option>
+
+
+
+    <label for="nombre">busqueda</label>
+    <input type="search" name="busqueda" id="busqueda">
+    <label for="nombre">telefono</label>
+     <input t   ype="tel" name id="telefono" >  
+
+     <div contenteditable="false" spellcheck="true">
+        escribe algo aqui </div>
+
+        <textarea spellcheck="true" name="texto" id="texto" cols="10" rows="10">Escribe  algo</textarea>  
+        <!-- spellcheck="true" → Habilita la corrección ortográfica. spellcheck="false" → Desactiva la
+corrección ortográfica. -->
+<input type="time" name="hora" id="hora">
+<label>Fecha de nacimiento<label>
+     <input type="date" name="fecha" id="fecha">
+<label>Numero telefonico<label>
+<input type name="number" name="numero" id="numero" required> 
+<!-- required → El campo es obligatorio. -->
+ <label for="rango">Rango</label>
+<input type="range" name="rango" id="rango" min="0" max="100" value="50">
+    <label for="color">Color</label>
+<input type ="color" name="color" id="color">  
+
+<label for="archivo">Archivo</label >
+  <input type="file" name="archivo" id="archivo">
+
+
+<input type ="submit" value="enviar" name="submit">
+<input type ="reset" value="resetear"name="reset">
+
+</form>
+
+
+
+</body >
+</html>

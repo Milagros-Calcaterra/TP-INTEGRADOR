@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Tienda Rick & Morty</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Rick & Morty Shop</h1>
+    <nav>
+      <button id="show-products">Personajes</button>
+      <button id="show-cart">Carrito (<span id="cart-count">0</span>)</button>
+    </nav>
+  </header>
+<main>
+  <section id="detail" class="hidden"></section>
+  <section id="products"></section>
+  <section id="cart" class="hidden"></section>
+</main>
+
+  <main>
+    <section id="products"></section>
+    <section id="detail" class="hidden"></section>
+    <section id="cart" class="hidden"></section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

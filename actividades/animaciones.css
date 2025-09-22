@@ -1,0 +1,14 @@
+.imagen{
+transform: translate(80px, 40px);
+/* cambia la ubicacion del elemento */
+/* rotate() rota el elemento */
+/* scale() cambia el tamaño del elemento */
+/* skew() cambia la inclinacion del elemento */
+
+transition: all 3s; 
+/* all: cambia todas las propiedades
+/* 
+transition-duration: 2s; */
+/* duracion de la transicion */
+
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos</title>
+</head>
+<body>
+    
+
+    <section>
+        <article>
+            <button onclick=""> hola </button>
+        </article>
+    </section>
+
+
+</body>
+<script>
+
+// window.addEventListener("resize" , (eventos)=> console.log( this.innerWidth, this.innerHeight));
+
+// window.addEventListener("mousemove" , (eventos)=> console.log(eventos.clientX, eventos.clientY));
+    document.addEventListener("keypress" , 
+    (eventos)=>{console.log(eventos.key)});
+
+    const grandParent = document.querySelector('section');
+    grandParent.addEventListener('click', ()=> console.log('grandparent'));
+    const parent = document.querySelector('article');
+
+    parent.addEventListener('click',
+     (eventos)=> console.log('parent'));
+    //  eventos.stopPropagation());
+    {capture: true};
+
+    const child = document.querySelector('button');
+    child.addEventListener('click', ()=> console.log('child'));
+</script>
+    </html>
