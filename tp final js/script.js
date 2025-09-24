@@ -1,8 +1,7 @@
-// ===== Variables globales =====
+
 let products = [];
 let cart = [];
 
-// ===== Fetch de personajes =====
 async function loadProducts() {
   try {
     const res = await fetch("products.json");
@@ -13,7 +12,7 @@ async function loadProducts() {
   }
 }
 
-// ===== Render de productos =====
+
 function renderProducts() {
   const container = document.getElementById("products");
   container.innerHTML = "";
@@ -31,19 +30,17 @@ function renderProducts() {
       </div>
     `;
 
-    // Evento detalle
     card.querySelector(".detail-btn").addEventListener("click", () => showDetail(product));
 
-    // Evento carrito
+
     card.querySelector(".cart-btn").addEventListener("click", () => addToCart(product));
 
     container.appendChild(card);
   });
 }
 
-// ===== Mostrar detalle arriba =====
 function showDetail(product) {
-  closePanels(); // cierro cualquier otro panel
+  closePanels(); 
 
   const detailSection = document.getElementById("detail");
   detailSection.innerHTML = `
@@ -61,16 +58,14 @@ function showDetail(product) {
   });
 }
 
-// ===== Agregar al carrito =====
 function addToCart(product) {
   cart.push(product);
   updateCart();
   showToast(`${product.name} agregado al carrito`);
 }
 
-// ===== Mostrar carrito arriba =====
 function showCart() {
-  closePanels(); // cierro otros paneles
+  closePanels(); 
 
   const cartSection = document.getElementById("cart");
   const count = document.getElementById("cart-count");
@@ -101,7 +96,6 @@ function showCart() {
   cartSection.classList.remove("hidden");
 }
 
-// ===== Cerrar paneles =====
 function closePanels() {
   const detailSection = document.getElementById("detail");
   const cartSection = document.getElementById("cart");
@@ -113,13 +107,11 @@ function closePanels() {
   cartSection.innerHTML = "";
 }
 
-// ===== Actualizar contador =====
 function updateCart() {
   const count = document.getElementById("cart-count");
   count.textContent = cart.length;
 }
 
-// ===== Toast =====
 function showToast(message) {
   const toast = document.getElementById("toast");
   toast.textContent = message;
@@ -129,7 +121,6 @@ function showToast(message) {
   }, 2000);
 }
 
-// ===== Navegación =====
 document.getElementById("show-products").addEventListener("click", () => {
   closePanels();
   document.getElementById("products").classList.remove("hidden");
